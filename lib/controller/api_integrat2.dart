@@ -190,3 +190,49 @@
 // print(newValue);
 //
 //   value.getresultdropdown(newValue, 12);
+
+//
+// api1= "https://sap.aghasteel.com.pk:8005/sap/opu/odata/sap/ZSD_CUSTOMER_TRGT_SRV/ZSPER_CUST_TRGTSet?$filter=TelNumb eq '3193314099' and Zmonth eq '202312'&$format=json"
+// api2= "https://sap.aghasteel.com.pk:8005/sap/opu/odata/sap/ZSD_VF05_REPORT_CUST_MAPP_SRV/ZSD_VF05_INTSet?$filter=AppNumb eq '3193314099' and Zmonth eq '202312'&$format=json"
+// api3="https://sap.aghasteel.com.pk:8005/sap/opu/odata/sap/zsd_col_cust_api_srv/ZSD_ZFICOL_SP_INTSet?$filter=AppNumb eq '3193314099' and Zmonth eq '202312'&$format=json"json
+
+// return DataTable(
+//
+//
+//   dataRowMaxHeight: 100,
+//   columns: [
+//     DataColumn(label: Text("Dealer")),
+//     DataColumn(label: Text("Details"))
+//   ],
+//   rows: [
+//     DataRow(
+//       cells: [
+//         DataCell(
+//             Column(
+//
+//           children: [
+//             Expanded(
+//               child: Text(
+//                 "${name.knName1}",
+//                 style: TextStyle(fontSize: 12),
+//               ),
+//             )
+//           ],
+//         )),
+//         DataCell(Column(
+//
+//           children: [
+//             Row(
+//               children: [Text("Collection Plan PKR"),
+//                 Text("data")],
+//             )
+//           ],
+//         ))
+//       ],
+//     ),
+//     DataRow(cells: [
+//       DataCell(Text("First Name ")),
+//       DataCell(Text("Last Name"))
+//     ])
+//   ],
+// );

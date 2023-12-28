@@ -1,4 +1,5 @@
 import 'package:demoproject/provider/results.dart';
+import 'package:demoproject/screen/customer_dealers.dart';
 import 'package:demoproject/screen/dropdown.dart';
 import 'package:demoproject/screen/first_page.dart';
 import 'package:flutter/material.dart';
@@ -17,13 +18,14 @@ class MyApp extends StatelessWidget {
       providers: [ChangeNotifierProvider(create: (context)=>ResultProvider(),
 
       ),
-        ChangeNotifierProvider(create: (context)=>DropDownProvider())
+        ChangeNotifierProvider(create: (context)=>DropDownProvider()),
+        ChangeNotifierProvider(create: (context)=>API1Provider()),
       ],
 
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'MyApp',
-        home: DropDown_Menu(),
+        home: CustomerDealer(),
       ),
     );
   }

@@ -37,6 +37,7 @@ class DropDownProvider extends ChangeNotifier{
     notifyListeners();
   }
 
+
   //
   // addItem(int item){
   //   if(item == "2023"){
@@ -45,7 +46,41 @@ class DropDownProvider extends ChangeNotifier{
   //
   //   }
   // }
+}
+
+class API1Provider extends ChangeNotifier{
+  CustomerDealerAPI1 _data = CustomerDealerAPI1();
+
+  List<dynamic> name = [];
+
+  List<API1> _api1 =[];
+  List<API2> _api2 =[];
+  List<API3> _api3 =[];
+
+  List<API1> get api1 => _api1;
+  List<API2> get api2 => _api2;
+  List<API3> get api3 => _api3;
+
+  Future<void> getDataAPI1(month) async{
+    final respose_api1 = await _data.getData(month);
+    _api1 = respose_api1;
+    notifyListeners();
+
+  }
+  Future<void> getDataAPI2(month) async{
+    final respose_api2 = await _data.getDataAPI2(month);
+    _api2 = respose_api2;
+    notifyListeners();
+
+  }
+  Future<void> getDataAPI3(month) async{
+    final respose_api3 = await _data.getDataAPI3(month);
+    _api3 = respose_api3;
+    notifyListeners();
+
+  }
 
 
 
 }
+
