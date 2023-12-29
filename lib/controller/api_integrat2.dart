@@ -236,3 +236,62 @@
 //     ])
 //   ],
 // );
+
+// Expanded(
+//
+//   child: ListView.builder(
+//     itemBuilder: (context, index) {
+//       var api11 = value.api2[index];
+//
+//       // var api2 = value.api2[index];
+//
+//       print(api11.name2);
+//       // print(api2.name2);
+//
+//       // var api3 = value.api3[index];
+//
+//       return Table(
+//         border: TableBorder.all(),
+//         children: [
+//           TableRow(children: [Text("Details"), Text("Dealer")]),
+//           TableRow(children: [
+//             Text("${api11.fkimg}"),
+//             Column(
+//               children: [
+//                 Row(
+//                   children: [
+//                     Text("Collection Data PKR "),
+//                     Spacer(),
+//                     Text(
+//                         "")
+//                   ],
+//                 ),
+//                 Row(
+//                   children: [
+//                     Text("Achive Plan PKR"),
+//                     Text("data")
+//                   ],
+//                 ),
+//                 Row(
+//                   children: [
+//                     Text("Target MTN"),
+//                     Spacer(),
+//                     Text("${api11.fkimg}")
+//                   ],
+//                 ),
+//                 Row(
+//                   children: [
+//                     Text("Acheive MTN"),
+//                     Text("data"),
+//                   ],
+//                 )
+//               ],
+//             )
+//           ]),
+//         ],
+//       );
+//
+//     },
+//     itemCount: value.api2.length,
+//   ),
+// ),

@@ -70,27 +70,41 @@ class Results {
 
 class API1 {
 
+  String? reDepositAmt;
+  String? textZpdc1Kunnr;
   String? knName1;
+
   String? salesTrgtMtn;
   String? colTrgtPkr;
+  String? SoName1;
+  String? fkimg;
 
   API1(
       {
+        required this.reDepositAmt,
+        required this.textZpdc1Kunnr,
         required this.knName1,
-
+        required this.SoName1,
+        required this.fkimg,
         required this.salesTrgtMtn,
         required this.colTrgtPkr});
 
   API1.fromJson(Map<String, dynamic> json) {
-
-    knName1 = json['KnName1'];
-    salesTrgtMtn = json['SalesTrgtMtn'];
-    colTrgtPkr = json['ColTrgtPkr'];
+    reDepositAmt = json['ReDepositAmt'] ?? "0";
+    textZpdc1Kunnr = json['TextZpdc1Kunnr'] ?? "0";
+    SoName1 = json['SoName1'] ?? "0";
+    fkimg = json['Fkimg'] ?? "0";
+    knName1 = json['KnName1'] ?? "0";
+    salesTrgtMtn = json['SalesTrgtMtn'] ?? "0";
+    colTrgtPkr = json['ColTrgtPkr'] ?? "0";
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-
+    data['ReDepositAmt'] = this.reDepositAmt;
+    data['TextZpdc1Kunnr'] = this.textZpdc1Kunnr;
+    data['SoName1'] = this.SoName1;
+    data['Fkimg'] = this.fkimg;
     data['KnName1'] = this.knName1;
     data['SalesTrgtMtn'] = this.salesTrgtMtn;
     data['ColTrgtPkr'] = this.colTrgtPkr;
@@ -98,58 +112,59 @@ class API1 {
   }
 }
 
-class API2 {
-
-  String? name2;
-  String? fkimg;
-
-
-  API2(
-      {
-        this.name2,
-        this.fkimg,
-       });
-
-  API2.fromJson(Map<String, dynamic> json) {
-
-    name2 = json['Name2'];
-    fkimg = json['Fkimg'];
-
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['Name2'] = this.name2;
-    data['Fkimg'] = this.fkimg;
-
-    return data;
-  }
-}
-class API3 {
-  String? reDepositAmt;
-  String? textZpdc1Kunnr;
-
-
-  API3(
-      {
-        this.reDepositAmt,
-        this.textZpdc1Kunnr,
-       });
-
-  API3.fromJson(Map<String, dynamic> json) {
-
-
-    reDepositAmt = json['ReDepositAmt'];
-    textZpdc1Kunnr = json['TextZpdc1Kunnr'];
-
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-
-    data['ReDepositAmt'] = this.reDepositAmt;
-    data['TextZpdc1Kunnr'] = this.textZpdc1Kunnr;
-
-    return data;
-  }
-}
+// class API2 {
+//
+//   String? name2;
+//   String? fkimg;
+//
+//
+//   API2(
+//       {
+//         this.name2,
+//         this.fkimg,
+//        });
+//
+//   API2.fromJson(Map<String, dynamic> json) {
+//
+//     name2 = json['Name2'];
+//     fkimg = json['Fkimg'];
+//
+//   }
+//
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = new Map<String, dynamic>();
+//     data['Name2'] = this.name2;
+//     data['Fkimg'] = this.fkimg;
+//
+//
+//     return data;
+//   }
+// }
+// class API3 {
+//   String? reDepositAmt;
+//   String? textZpdc1Kunnr;
+//
+//
+//   API3(
+//       {
+//         this.reDepositAmt,
+//         this.textZpdc1Kunnr,
+//        });
+//
+//   API3.fromJson(Map<String, dynamic> json) {
+//
+//
+//     reDepositAmt = json['ReDepositAmt'];
+//     textZpdc1Kunnr = json['TextZpdc1Kunnr'];
+//
+//   }
+//
+//   Map<String, dynamic> toJson() {
+//     final Map<String, dynamic> data = new Map<String, dynamic>();
+//
+//     data['ReDepositAmt'] = this.reDepositAmt;
+//     data['TextZpdc1Kunnr'] = this.textZpdc1Kunnr;
+//
+//     return data;
+//   }
+// }
